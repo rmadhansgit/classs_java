@@ -1,0 +1,57 @@
+1 ) class Madhan 
+{
+	public static void main (String [] args)
+	{
+		String name = "HARI";
+		int age= 17;
+		char grade='B';
+		boolean passed=true;
+		System.out.println("Name :"+age);
+		System.out.println("AGE :"+age);
+		System.out.println("GRADE :"+grade);
+		
+		System.out.println("PASSED :"+passed);
+	}
+}
+
+2 ) class Raja
+{
+	public static void main (String [] args)
+	{
+		int mark =80;
+		int mark2=90;
+		int mark3=70;
+		
+		int total = mark + mark2 + mark3;
+		float average= total/3f;
+		System.out.println("TOTAL= " +total);
+		System.out.println("AVERAGE= " +average);
+		
+	}
+}
+
+3)
+class Rajamadhan
+{
+	public static void main (String [] args)
+	{
+		byte b =10;
+		short s =200;
+	    int i = 5000;
+		long l =100000l;
+		float f = 5.5f;
+		double d = 123.456;
+		char c = 'S';
+		boolean ok = false;
+		System.out.println("BYTE :" +b);
+		System.out.println("SHORT :" +s);
+		System.out.println("INT :" +i);
+		System.out.println("LONG :" +l);
+		System.out.println("FLOAT :" +f);
+		System.out.println("DOUBLE :" +d);
+		System.out.println("CHAR :" +c);
+		System.out.println("BOOLEAN :" +ok);
+		
+	}
+
+}

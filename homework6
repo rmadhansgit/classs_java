@@ -1,0 +1,77 @@
+1)
+class Math
+{
+	public static void main(String[]args)
+	{
+		int a=20;
+		int b=10;
+		System.out.println("addition : " +(a+b));
+		System.out.println("substraction : " +(a-b));
+		System.out.println("mul : " +(a*b));
+		System.out.println("divi : " +(a/b));
+		System.out.println("mod: " +(a%b));
+	}
+}
+
+2)
+class Assign
+{
+	public static void main(String[]args)
+	{
+		int a=10;
+		System.out.println("ans: "+(a+=10));
+		System.out.println("ans: "+(a-=10));
+		System.out.println("ans: "+(a*=10));
+		System.out.println("ans: "+(a/=10));
+		
+	}
+}
+
+3)class Relation
+{
+	public static void main(String []args)
+	{
+		int a=10;
+		int b=20;
+		System.out.println("ans: "+(a==b));
+		System.out.println("ans: "+(a>b));
+		System.out.println("ans: "+(a<b));
+		System.out.println("ans: "+(a!=b));
+	}
+}
+
+4)
+  class Logic
+{
+	public static void main(String []args)
+	{
+		int a=10;
+		int b=5;
+		System.out.println("ans: "+(a>0&&b<0));
+		System.out.println("ans: "+(a>0||b>0));
+		System.out.println("ans: "+!(a>0||b<0));
+		
+	}
+}
+
+5)
+  class ALL
+{
+	public static void main(String[]args)
+	{
+		int a=10;
+		int b=5;
+		int c=15;
+		int result1=a+b+c;
+		boolean result2= a>b&&b>c&&c>a;
+		boolean result3=a==b;
+		
+		System.out.println("ans: "+result1);
+		System.out.println("ans: "+result2);
+		System.out.println("ans: "+result3);
+		
+		
+		
+	}
+	
+}

@@ -1,0 +1,77 @@
+1 )
+class Signal
+{
+	public static void main(String []args)
+	{
+		String R="stop";
+		String y="Ready";
+		String G="GO";
+		if(R=="stop")
+		{
+			System.out.println("the siganl indicate red so :"+R);
+		}
+		if(y=="Ready")
+		{
+			
+		System.out.println("the siganl indicate yellow so :"+y);
+		}
+		if(G=="GO")
+		{
+			
+		System.out.println("the siganl indicate green so :" +G);
+		} 
+	}
+}
+
+2 )
+class Age
+{
+	public static void main(String []args)
+	{
+		int age=18;
+		if(age<12)
+		{
+			System.out.println("the ticket price $80 :"+age);
+		}
+		else if(age>12 && age<=59)
+		{
+			System.out.println("the ticket price $150 :"+age);
+		}
+		else if(age>=60)
+		{
+			System.out.println("above 60 ticket price just $100" +age);
+		}
+		else
+		{
+			System.out.println("if you helath is not good so not allowed");
+		}
+	}
+}
+
+3)
+
+class Mobile
+{
+	public static void main(String []args)
+	{
+		int battery=79;
+		if(battery>=80)
+		{
+			System.out.println("the Battery is full");
+		}
+		else if(battery >=30 && battery <=79)
+		{
+			System.out.println("the battery life normal ");
+		}
+		else if(battery<30)
+		{
+			System.out.println("charge now");
+		}
+		else
+		{
+			System.out.println("after switch off phone");
+		}
+	}
+}
+		
+	

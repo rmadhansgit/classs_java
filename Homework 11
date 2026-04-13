@@ -1,0 +1,161 @@
+
+import java.util.Scanner;
+
+ class Spotify{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("SPOTIFY WELCOMES YOU");
+        System.out.println("SELECT YOUR OPTION:");
+        System.out.println("1. A.R. RAHMAN");
+        System.out.println("2. ANIRUDH");
+        System.out.println("3. HARISH JEYARAJ");
+        System.out.println("4. ILLAIYARAJA");
+        System.out.println("5. U1");
+
+        int artistChoice = sc.nextInt();
+
+        switch (artistChoice) {
+
+            case 1: // A.R. RAHMAN
+                System.out.println("\nA.R. RAHMAN - SELECT MOOD:");
+                System.out.println("1. Melody  2. Kuthu  3. Motivational  4. Sad");
+                int arMood = sc.nextInt();
+                switch (arMood) {
+                    case 1:
+                        System.out.println("Melody Songs:");
+                        System.out.println("• Netru illadha Matram\n• Enna Solla Pogirai\n• Ennavale Adi Ennavale\n• Malargale Malargale");
+                        break;
+                    case 2:
+                        System.out.println("Kuthu Songs:");
+                        System.out.println("• Thaiya Thaiya\n• Mukkala Mukkabala\n• Urvashi Urvashi\n• Aathichudi");
+                        break;
+                    case 3:
+                        System.out.println("Motivational Songs:");
+                        System.out.println("• Vande Mataram\n• Oruvan Oruvan Mudhalli\n• Shakthi Kodu\n• Kappal Yeari Poyachu");
+                        break;
+                    case 4:
+                        System.out.println("Sad Songs:");
+                        System.out.println("• Poongatrile\n• Marudaani\n• Minnalea En Vazhvin\n• Rasathi\n• Oru Poiyavathu Sol");
+                        break;
+                    default:
+                        System.out.println("Invalid mood choice!");
+                }
+                break;
+
+            case 2: // ANIRUDH
+                System.out.println("\nANIRUDH - SELECT MOOD:");
+                System.out.println("1. Melody  2. Kuthu  3. Motivational  4. Sad");
+                int aniMood = sc.nextInt();
+                switch (aniMood) {
+                    case 1:
+                        System.out.println("Melody Songs:");
+                        System.out.println("• Neeyum Nanum Anbe\n• Velicha Poove\n• Po Indru Neeyaga\n• Nee Partha Vizhigal");
+                        break;
+                    case 2:
+                        System.out.println("Kuthu Songs:");
+                        System.out.println("• Vaathi Raid\n• Naa Ready\n• Badass\n• Vandha Edam");
+                        break;
+                    case 3:
+                        System.out.println("Motivational Songs:");
+                        System.out.println("• Velai Illa Pattathari\n• Boomi Enna Suthudhe\n• Ethir Neechal\n• Surviva");
+                        break;
+                    case 4:
+                        System.out.println("Sad Songs:");
+                        System.out.println("• Porkanda Singam\n• Kanave Kanave\n• Kannaana Kanne\n• Jodi Nilave");
+                        break;
+                    default:
+                        System.out.println("Invalid mood choice!");
+                }
+                break;
+
+            case 3: // HARISH JEYARAJ
+                System.out.println("\nHARISH JEYARAJ - SELECT MOOD:");
+                System.out.println("1. Melody  2. Kuthu  3. Sad");
+                int hjMood = sc.nextInt();
+                switch (hjMood) {
+                    case 1:
+                        System.out.println("Melody Songs:");
+                        System.out.println("• Unnale\n• Annul Maele\n• Yedho Ondru\n• Vaseegara\n• Paartha Mudhal");
+                        break;
+                    case 2:
+                        System.out.println("Kuthu Songs:");
+                        System.out.println("• Tirunelveli Halwa Da\n• Aradi Katre\n• Soda Bottle\n• Aruva Meesai");
+                        break;
+                    case 3:
+                        System.out.println("Sad Songs:");
+                        System.out.println("• Venmathiye\n• Oh Maname\n• Yamma Yamma\n• Othayile");
+                        break;
+                    default:
+                        System.out.println("Invalid mood choice!");
+                }
+                break;
+
+            case 4: // ILLAIYARAJA
+                System.out.println("\nILLAIYARAJA - SELECT MOOD:");
+                System.out.println("1. Melody  2. Kuthu  3. Sad");
+                int irMood = sc.nextInt();
+                switch (irMood) {
+                    case 1:
+                        System.out.println("Melody Songs:");
+                        System.out.println("• Oru Kili Uruguthu\n• Kuzhaloodhum Kannanukku\n• Ennai Thottu\n• Raja Raja Cholan");
+                        break;
+                    case 2:
+                        System.out.println("Kuthu Songs:");
+                        System.out.println("• Ooruvittu Ooruvanthu\n• Nooru Varusham\n• Aasai Nooruvagai\n• Aasai Athigam Vachu");
+                        break;
+                    case 3:
+                        System.out.println("Sad Songs:");
+                        System.out.println("• Kanne Kalaimane\n• Thene Thenpaandi Neeye\n• Paadi Parantha Killi\n• Nilave Vaa");
+                        break;
+                    default:
+                        System.out.println("Invalid mood choice!");
+                }
+                break;
+
+            case 5: // U1
+                System.out.println("\nU1 - SELECT MOOD:");
+                System.out.println("1. Melody  2. Kuthu  3. Motivational  4. Sad");
+                int u1Mood = sc.nextInt();
+                switch (u1Mood) {
+                    case 1:
+                        System.out.println("Melody Songs:");
+                        System.out.println("• Aathadi Manasudhan\n• Chinna Sirisu\n• Venmeggam\n• Iayyayyo");
+                        break;
+                    case 2:
+                        System.out.println("Kuthu Songs:");
+                        System.out.println("• Machi Open the Bottle\n• Saroja Saman Nikalo\n• No Money No Honey\n• Villaiyadu Mankatha");
+                        break;
+                    case 3:
+                        System.out.println("Motivational Songs:");
+                        System.out.println("• Edhirthu Nill\n• Oru Nalil\n• Nimirnthu NIL\n• Ungakkule Mirugam");
+                        break;
+                    case 4:
+                        System.out.println("Sad Songs:");
+                        System.out.println("• Kadhal Valarthen\n• Yedho Ondru Ennai\n• Pogadhe\n• Ninaithu Ninaithu");
+                        break;
+                    default:
+                        System.out.println("Invalid mood choice!");
+                }
+                break;
+
+            default:
+                System.out.println("Invalid artist choice!");
+        }
+
+        System.out.println("\nTHANK YOU FOR USING ME");
+        sc.close();
+    }
+}
+```
+
+**Key concepts used:**
+
+**Nested Switch-Case** — outer switch selects the artist, inner switch selects the mood.
+
+**Structure:**
+- Level 1 → Artist (1–5)
+- Level 2 → Mood (Melody / Kuthu / Motivational / Sad)
+- Each inner `case` prints the matching song list
+
+**Note:** Harish Jeyaraj has no Motivational category as per your images, so only 3 moods are listed for him.

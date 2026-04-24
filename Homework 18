@@ -1,0 +1,64 @@
+1) import java.util.Scanner;
+
+public class SecondMax {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of elements: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        System.out.println("Enter elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int max = Integer.MIN_VALUE, secondMax = Integer.MIN_VALUE;
+
+        for (int i = 0; i < n; i++) {
+            if (arr[i] > max) {
+                secondMax = max;
+                max = arr[i];
+            } else if (arr[i] > secondMax && arr[i] != max) {
+                secondMax = arr[i];
+            }
+        }
+
+        System.out.println("Second Maximum: " + secondMax);
+    }
+}
+
+2) import java.util.Scanner;
+
+public class ShoppingBilling {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of items: ");
+        int n = sc.nextInt();
+        double[] prices = new double[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter price of item " + (i + 1) + ": ");
+            prices[i] = sc.nextDouble();
+        }
+
+        double total = 0;
+        for (double price : prices) {
+            total += price;
+        }
+
+        double discount = 0;
+        if (total > 5000) {
+            discount = total * 0.20;
+        } else if (total > 2000) {
+            discount = total * 0.10;
+        }
+
+        double finalAmount = total - discount;
+
+        System.out.println("------ BILL DETAILS ------");
+        System.out.println("Total Amount : " + total);
+        System.out.println("Discount     : " + discount);
+        System.out.println("Final Amount : " + finalAmount);
+    }
+}

@@ -1,0 +1,96 @@
+import java.util.Scanner;
+
+public class EmployeeManagement {
+
+    // LinkedList Node
+    static int[] empList = new int[100];
+    static int size = 0;
+    static Scanner sc = new Scanner(System.in);
+
+    // Function to add employee ID
+    static void addEmployee() {
+        System.out.print("Enter employee ID: ");
+        int id = sc.nextInt();
+        empList[size] = id;
+        size++;
+        System.out.println("Employee ID added.");
+    }
+
+    // Function to remove employee ID
+    static void removeEmployee() {
+        System.out.print("Enter employee ID to remove: ");
+        int id = sc.nextInt();
+        boolean found = false;
+
+        for (int i = 0; i < size; i++) {
+            if (empList[i] == id) {
+                // Shift elements left
+                for (int j = i; j < size - 1; j++) {
+                    empList[j] = empList[j + 1];
+                }
+                size--;
+                found = true;
+                System.out.println("Employee ID removed.");
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Employee ID not found.");
+        }
+    }
+
+    // Function to display all employee IDs
+    static void displayEmployees() {
+        if (size == 0) {
+            System.out.println("No employee IDs found.");
+            return;
+        }
+        System.out.print("Employee IDs:\n");
+        for (int i = 0; i < size; i++) {
+            System.out.print(empList[i]);
+            if (i < size - 1) System.out.print(" ");
+        }
+        System.out.println();
+    }
+
+    // Function to display menu
+    static void displayMenu() {
+        System.out.println("\nMenu:");
+        System.out.println("1. Add employee ID");
+        System.out.println("2. Remove employee ID");
+        System.out.println("3. Display employee IDs");
+        System.out.println("4. Exit");
+    }
+
+    // Main function
+    public static void main(String[] args) {
+        int choice;
+
+        do {
+            displayMenu();
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    addEmployee();
+                    break;
+                case 2:
+                    removeEmployee();
+                    break;
+                case 3:
+                    displayEmployees();
+                    break;
+                case 4:
+                    System.out.println("Exiting system.");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Try again.");
+            }
+
+        } while (choice != 4);
+
+        sc.close();
+    }
+}

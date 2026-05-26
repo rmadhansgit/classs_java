@@ -1,0 +1,67 @@
+// Base class
+class Vehicle {
+    String brand;
+    int year;
+
+    Vehicle(String brand, int year) {
+        this.brand = brand;
+        this.year = year;
+    }
+
+    void displayInfo() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Year: " + year);
+    }
+}
+
+// Derived class Car
+class Car extends Vehicle {
+    int seats;
+
+    Car(String brand, int year, int seats) {
+        super(brand, year);
+        this.seats = seats;
+    }
+
+    @Override
+    void displayInfo() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Year: " + year);
+        System.out.println("Seats: " + seats);
+    }
+}
+
+// Derived class Motorcycle
+class Motorcycle extends Vehicle {
+    String type;
+
+    Motorcycle(String brand, int year, String type) {
+        super(brand, year);
+        this.type = type;
+    }
+
+    @Override
+    void displayInfo() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Year: " + year);
+        System.out.println("Type: " + type);
+    }
+}
+
+// Main class
+public class VehicleManagement {
+    public static void main(String[] args) {
+        System.out.println("Vehicle Management System");
+        System.out.println("------------------------");
+
+        System.out.println("Car:");
+        Car car = new Car("Toyota", 2022, 5);
+        car.displayInfo();
+
+        System.out.println();
+
+        System.out.println("Bike:");
+        Motorcycle bike = new Motorcycle("Yamaha", 2020, "Sports");
+        bike.displayInfo();
+    }
+}

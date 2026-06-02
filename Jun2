@@ -1,0 +1,61 @@
+1) import java.util.Scanner;
+
+public class Bank {
+    static final String BANK_NAME = "ABC Bank";
+    static final double INTEREST_RATE = 7.5;
+
+    static double calculateInterest(double principal, int years) {
+        return (principal * INTEREST_RATE * years) / 100;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter principal amount: ");
+        double principal = sc.nextDouble();
+
+        System.out.print("Enter number of years: ");
+        int years = sc.nextInt();
+
+        double interest = calculateInterest(principal, years);
+
+        System.out.println("Bank Name: " + BANK_NAME);
+        System.out.println("Principal Amount: " + principal);
+        System.out.println("Years: " + years);
+        System.out.println("Interest Amount: " + interest);
+
+        sc.close();
+    }
+}
+
+2)import java.util.Scanner;
+
+public class College {
+    static final String collegeName = "XYZ Engineering College";
+    final double registrationFee;
+    static int totalStudents = 0;
+
+    College(double registrationFee) {
+        this.registrationFee = registrationFee;
+        totalStudents++;
+    }
+
+    static void displayCollegeDetails() {
+        System.out.println("College Name: " + collegeName);
+        System.out.println("Total Students: " + totalStudents);
+    }
+
+    void displayStudentFee() {
+        System.out.println("Student Registration Fee: " + registrationFee);
+    }
+
+    public static void main(String[] args) {
+        College student1 = new College(25000);
+        College student2 = new College(30000);
+
+        displayCollegeDetails();
+
+        student1.displayStudentFee();
+        student2.displayStudentFee();
+    }
+}

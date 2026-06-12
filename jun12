@@ -1,0 +1,146 @@
+ackage javaapplication34;
+
+
+public class  LoggMsg {
+    
+    static LoggMsg instance;
+    
+    
+    private LoggMsg()
+    {
+        
+    }
+    
+    public static LoggMsg getinstance()
+    {
+        
+        
+        
+        if(instance==null)
+        {
+            instance=new LoggMsg();
+            
+        }
+        return instance;
+        }
+    
+    
+    public void logMessage(String msg)
+            {
+                
+                System.out.println(msg);
+        
+    }
+    
+    
+    
+    public static void main(String[] args) {
+        
+       LoggMsg p= LoggMsg.getinstance();
+       
+       Thread t1=new Thread(()->{
+           LoggMsg log=LoggMsg.getinstance();
+           log.logMessage("hello");
+       
+       });
+       
+       
+        Thread t2=new Thread(()->{
+           LoggMsg log=LoggMsg.getinstance();
+           log.logMessage("welcome");
+       
+        
+        
+    });
+
+
+2)
+package javaapplication34;
+
+
+public class PrinterManager {
+    
+    static PrinterManager instance;
+    
+    
+    
+    private PrinterManager()
+    {
+        
+    }
+    
+    public static PrinterManager getinstance()
+    {
+        if(instance==null)
+        {
+            instance=new PrinterManager();
+            
+        }
+        return instance;
+        
+    }
+    
+    
+    public static void main(String[] args) {
+        
+    PrinterManager p   = PrinterManager.getinstance();
+    PrinterManager q  =PrinterManager.getinstance();
+        System.out.println(p==q);
+        System.out.println(p.hashCode()); 
+        System.out.println(q.hashCode());
+        
+        
+    }
+    
+    
+    
+}
+
+
+3)class UserSession {
+
+    private static UserSession obj;
+    private String userName;
+
+    // private constructor
+    private UserSession() {
+    }
+
+    // Singleton method
+    public static UserSession getInstance() {
+        if (obj == null) {
+            obj = new UserSession();
+        }
+        return obj;
+    }
+
+    public void setUser(String name) {
+        userName = name;
+    }
+
+    public void showUser() {
+        System.out.println("User Name: " + userName);
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+
+        first reference
+        UserSession user1 = UserSession.getInstance();
+        user1.setUser("Madhan");
+
+        second reference
+        UserSession user2 = UserSession.getInstance();
+
+        user2.showUser();
+
+        checking same object
+        System.out.println(user1 == user2);
+    }
+}
+
+        t1.start();
+        t2.start();
+}
